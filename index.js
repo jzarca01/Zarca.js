@@ -4,6 +4,6 @@ const Zarca = function() {
     return {
         render
     }
-};
+}
 
-module.exports = Zarca;
+module.exports = Zarca();
