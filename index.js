@@ -5,5 +5,5 @@ const Zarca = function() {
         render
     }
 }
-
+window.Zarca = Zarca();
 module.exports = Zarca();

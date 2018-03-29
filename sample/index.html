@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Zarca.js sample app</title>
+    </head>
+    <body>
+        <h1>List of car brands : </h1>
+        <div id="root"></div>
+    </body>
+    <script src="../dist/zarca.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        const cars = [
+            {
+                name: "Saab",
+                url: "https://fr.wikipedia.org/wiki/Saab_Automobile"
+            },
+            {
+                name: "Volvo",
+                url: "https://fr.wikipedia.org/wiki/Volvo"
+            },
+            {
+                name: "BMW",
+                url: "https://fr.wikipedia.org/wiki/Bayerische_Motoren_Werke"
+            }
+        ];
+
+        const appElement = {
+            type: "div",
+            props: {
+                children: [{
+                    type: "ul",
+                    props: {
+                        children: cars.map(carElement)
+                    }
+                }]
+            }
+        };
+
+        function carElement({ name, url}) {
+            const linkElement = {
+                type: "a",
+                props: {
+                    href: url,
+                    children: [{
+                        type: "TEXT ELEMENT",
+                        props: {
+                            nodeValue: name
+                        }
+                    }]
+                }
+            };
+
+            return {
+                type: "li",
+                props: {
+                    children: [
+                        linkElement
+                    ]
+                }
+            };
+        }
+
+        Zarca.render(appElement, document.getElementById('root'));
+    </script>
+</html>
