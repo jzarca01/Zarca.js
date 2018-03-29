@@ -1,0 +1,24 @@
+{
+  "name": "zarcajs",
+  "version": "1.0.0",
+  "description": "JSX Framework",
+  "main": "zarca.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jzarca01/ZarcaJS.git"
+  },
+  "author": "Jeremie Zarca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jzarca01/ZarcaJS/issues"
+  },
+  "homepage": "https://github.com/jzarca01/ZarcaJS#readme",
+  "keywords": [
+    "zarca",
+    "zarcajs",
+    "framework"
+  ]
+}
