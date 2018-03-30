@@ -23,15 +23,34 @@
             }
         ];
 
+        const hoverableAlert = {
+            type: "button",
+            props: {
+                onMouseEnter: function() {
+                    alert("You hovered this button");
+                },
+                children: [{
+                    type: "TEXT ELEMENT",
+                    props: {
+                        nodeValue: "Hover me"
+                    }
+                }]
+            }
+        }
+
+
         const appElement = {
             type: "div",
             props: {
-                children: [{
-                    type: "ul",
-                    props: {
-                        children: cars.map(carElement)
-                    }
-                }]
+                children: [
+                    {
+                        type: "ul",
+                        props: {
+                            children: cars.map(carElement)
+                        }
+                    },
+                    hoverableAlert
+                ]
             }
         };
 
@@ -49,11 +68,27 @@
                 }
             };
 
+            const clickableAlert = {
+                type:"button",
+                props: {
+                    onClick: function() {
+                        alert("You clicked on "+name);
+                    },
+                    children: [{
+                        type: "TEXT ELEMENT",
+                        props: {
+                            nodeValue: "Click here"
+                        }
+                    }]
+                }
+            }
+
             return {
                 type: "li",
                 props: {
                     children: [
-                        linkElement
+                        linkElement,
+                        clickableAlert
                     ]
                 }
             };
