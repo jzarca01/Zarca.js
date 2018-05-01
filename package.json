@@ -1,6 +1,6 @@
 {
   "name": "zarcajs",
-  "version": "1.0.0",
+  "version": "0.1",
   "description": "JSX Framework",
   "main": "zarca.js",
   "scripts": {
