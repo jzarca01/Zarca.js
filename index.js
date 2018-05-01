@@ -1,8 +1,10 @@
 const render = require('./functions/render');
+const createElement = require('./functions/create-element');
 
-const Zarca = function() {
+const Zarca = function () {
     return {
-        render
+        render,
+        createElement
     }
 }
 window.Zarca = Zarca();
